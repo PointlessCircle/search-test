@@ -33,11 +33,13 @@ function cB(cat, row) {
     var button = document.createElement('button');
     button.innerHTML = cat;
     button.onclick = function () { output() };
+    button.id = cat;
     document.getElementById(row).appendChild(button);
   } else {
     var button = document.createElement('button');
     button.innerHTML = cat;
     button.onclick = function () { ddC(cat) };
+    button.id = cat;
     document.getElementById(row).appendChild(button);
   }
 };
