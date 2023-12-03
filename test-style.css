@@ -18,6 +18,7 @@ button {
     cursor: pointer;
     font-size: medium;
     padding: 5px;
+    margin: 0 2px;
     font-family: 'Red Hat Display';
     transition-duration: 0.4s;
 }
