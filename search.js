@@ -27,3 +27,25 @@ function output() {
   //output outString into DPL params
   outString = ""; //empty outString to allow next run
 }
+
+function cB(cat, row) {
+  if (cat == 'Submit') {
+    var button = document.createElement('button');
+    button.innerHTML = cat;
+    button.onclick = function () { output() };
+    document.getElementById(row).appendChild(button);
+  } else {
+    var button = document.createElement('button');
+    button.innerHTML = cat;
+    button.onclick = function () { ddC(cat) };
+    document.getElementById(row).appendChild(button);
+  }
+};
+
+//Genders
+cB('Male', 'r1');
+cB('Female', 'r1');
+cB('Other', 'r1');
+
+//Submit
+cB('Submit', 'r2')
