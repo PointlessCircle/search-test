@@ -1,4 +1,9 @@
 let catList = []; //declare 'catList'
+const allCats = new Map(
+  ['Male','Gender:Male'],
+  ['Female','Gender:Female'],
+  ['Other','Gender:Other'],
+);
 let outString = ""; //declare 'outString'
 let catPlus = "Category:";
 
@@ -17,7 +22,7 @@ function ddC(cat) {
 }
 
 function catg(value) {
-  outString += catPlus + value + "<br>";
+  outString += catPlus + allCats.get(value) + "<br>";
   //set output to "Catagory:" + the value of the array element + newline
 }
 
@@ -29,19 +34,15 @@ function output() {
 }
 
 function cB(cat, row) {
+  var button = document.createElement('button');
+  button.innerHTML = cat;
   if (cat == 'Submit') {
-    var button = document.createElement('button');
-    button.innerHTML = cat;
     button.onclick = function () { output() };
-    button.id = cat;
-    document.getElementById(row).appendChild(button);
   } else {
-    var button = document.createElement('button');
-    button.innerHTML = cat;
     button.onclick = function () { ddC(cat) };
-    button.id = cat;
-    document.getElementById(row).appendChild(button);
   }
+  button.id = cat;
+  document.getElementById(row).appendChild(button);
 };
 
 //Genders
