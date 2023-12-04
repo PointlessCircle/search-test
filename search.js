@@ -1,9 +1,9 @@
 let catList = []; //declare 'catList'
-const allCats = new Map(
+const allCats = new Map([
   ['Male','Gender:Male'],
   ['Female','Gender:Female'],
   ['Other','Gender:Other'],
-);
+]);
 let outString = ""; //declare 'outString'
 let catPlus = "Category:";
 
@@ -51,4 +51,4 @@ cB('Female', 'r1');
 cB('Other', 'r1');
 
 //Submit
-cB('Submit', 'r2')
+cB('Submit', 'r2');
